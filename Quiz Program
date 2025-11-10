@@ -1,0 +1,98 @@
+#include <stdio.h>
+
+int main() {
+    char ans, see;
+    int mark = 0;
+    float per;
+
+    printf("WELCOME TO QUIZ GAME\n");
+    printf("--------------------\n");
+    printf("Rules:\n");
+    printf("1. One try per question.\n");
+    printf("2. You can use small or capital letters.\n\n");
+
+    // Question 1
+    printf("1) What is the capital of Canada?\n");
+    printf("a) Toronto\nb) Ottawa\nc) Victoria\nd) Regina\n");
+    printf("Your answer: ");
+    scanf(" %c", &ans);
+    if (ans == 'b' || ans == 'B') {
+        printf("Correct!\n\n");
+        mark++;
+    } else {
+        printf("Wrong! Correct answer is b.\n\n");
+    }
+
+    // Question 2
+    printf("2) Which language is used to write this program?\n");
+    printf("a) Python\nb) C\nc) Java\nd) Ruby\n");
+    printf("Your answer: ");
+    scanf(" %c", &ans);
+    if (ans == 'b' || ans == 'B') {
+        printf("Correct!\n\n");
+        mark++;
+    } else {
+        printf("Wrong! Correct answer is b.\n\n");
+    }
+
+    // Question 3
+    printf("3) What is 10*2/5*0?\n");
+    printf("a) 1\nb) 5\nc) 25\nd) 0\n");
+    printf("Your answer: ");
+    scanf(" %c", &ans);
+    if (ans == 'd' || ans == 'D') {
+        printf("Correct!\n\n");
+        mark++;
+    } else {
+        printf("Wrong! Correct answer is d.\n\n");
+    }
+
+    // Question 4
+    printf("4) Which planet is known as the Red Planet?\n");
+    printf("a) Earth\nb) Venus\nc) Jupiter\nd) Mars\n");
+    printf("Your answer: ");
+    scanf(" %c", &ans);
+    if (ans == 'd' || ans == 'D') {
+        printf("Correct!\n\n");
+        mark++;
+    } else {
+        printf("Wrong! Correct answer is d.\n\n");
+    }
+
+    // Question 5
+    printf("5) What is the value of pi (approx)?\n");
+    printf("a) 2.12\nb) 3.14\nc) 4.00\nd) 5.00\n");
+    printf("Your answer: ");
+    scanf(" %c", &ans);
+    if (ans == 'b' || ans == 'B') {
+        printf("Correct!\n\n");
+        mark++;
+    } else {
+        printf("Wrong! Correct answer is b.\n\n");
+    }
+
+    // Final result
+    printf("--------------------\n");
+    printf("You got %d out of 5 correct.\n", mark);
+
+    // Ask if user wants to see percentage
+    printf("Do you want to see your percentage? (y/n): ");
+    scanf(" %c", &see);
+
+    if (see == 'y' || see == 'Y') {
+        per = (mark / 5.0) * 100;
+        printf("\nYour percentage: %.2f%%\n", per);
+
+        if (per == 100)
+            printf("Excellent! Perfect score!\n");
+        else if (per >= 60)
+            printf("Good job!\n");
+        else
+            printf("Better luck next time!\n");
+    } else {
+        printf("Okay! Not showing percentage.\n");
+    }
+
+    printf("Thank you for playing!\n");
+    return 0;
+}
